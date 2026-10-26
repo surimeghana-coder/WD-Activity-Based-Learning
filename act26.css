@@ -1,0 +1,672 @@
+/* =========================
+   BASIC SETTINGS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: whitesmoke;
+    color: rgb(24, 23, 23);
+}
+section {
+    padding: 80px 8%;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+header {
+    background-color: rgb(28, 27, 27);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.navbar {
+    min-height: 75px;
+    padding: 10px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    color: white;
+}
+.logo h2 {
+    font-size: 24px;
+}
+.logo h2 span {
+    color: goldenrod;
+}
+.logo p {
+    color: goldenrod;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+.nav-links a:hover {
+    color: goldenrod;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 92vh;
+    position:relative;
+    overflow:hidden;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.65)
+        ),
+        url("homebg.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 900px;
+    animation: heroReveal 1s ease-out;
+}
+@keyframes heroReveal{
+    from{
+        opacity: 0;
+        transform: translateY(35px);
+    }
+    to{
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+.small-title {
+    color: goldenrod;
+    letter-spacing: 4px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.hero h1 {
+    font-size: 65px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    line-height: 1.1;
+    text-shadow: 0px 0px 10px rgb(255,204, 0,0.4);
+}
+.hero h1 span {
+    color: goldenrod;
+    display: block;
+}
+.tagline {
+    font-size: 25px;
+    margin: 20px 0;
+    letter-spacing: 3px;
+}
+.description {
+    font-size: 18px;
+    max-width: 650px;
+    margin: auto;
+}
+.main-btn {
+    display: inline-block;
+    margin-top: 30px;
+
+    padding: 14px 30px;
+
+    background-color: goldenrod;
+    color:rgb(25, 24, 24);
+
+    text-decoration: none;
+    font-weight: bold;
+
+    border-radius: 30px;
+
+    transition: 0.3s;
+}
+.main-btn:hover {
+    background-color: white;
+    transform: translateY(-3px);
+}
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.section-title p {
+    color: goldenrod;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+.section-title h2 {
+    font-size: (30px,5vw,44px);
+    font-weight: 800;
+    margin-top: 5px;
+    color:  rgb(21, 20, 20);
+}
+.section-title h2::after{
+    content: "";
+    display: block;
+    width: 55px;
+    height: 4px;
+    margin: 15px auto 0;
+    background: linear-gradient(90deg,rgb(244, 228, 3),rgb(244, 123, 3));
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    background-color: white;
+}
+.about-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.about-card {
+    width: 280px;
+    padding: 35px 28px;
+
+    background-color: rgba(255,255,255,0.9);
+
+    border: 1px solid whitesmoke;
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
+
+    transition: all 0.35s ease;
+}
+.about-card:hover {
+    transform: translateY(-12px);
+    border-color: goldenrod;
+    box-shadow:
+     0 20px 45px rgba(0, 0, 0, 0.13);
+}
+.icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+.about-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+/* =========================
+   SCHEDULE
+========================= */
+.schedule {
+    background-color: whitesmoke;
+}
+
+.table-container {
+    overflow-x: auto;
+    margin: auto;
+    max-width: 1050px;
+    border-radius: 0 15px 40px rgba(0,0,0,0.12);
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th,
+td {
+    padding: 20px;
+    border: 1px solid beige;
+    text-align: center;
+}
+
+th {
+    background-color: rgb(17, 17, 17);
+    color: goldenrod;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+tr{
+    transition: 0.25s;
+}
+
+tr:hover {
+    background-color: beige;
+    transform: scale(1.005);
+}
+/* =========================
+   GUESTS
+========================= */
+
+.guests {
+    background-color: white;
+}
+
+.guest-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.guest-card {
+    width: 280px;
+    padding: 30px;
+
+    background-color: white;
+
+    border: 1px solid white;
+    border-radius: 22px;
+
+    text-align: center;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
+    transition: 0.35s;
+}
+.guest-card:hover{
+    transform: translateY(-12px);
+    box-shadow: 0 25px 50px black
+}
+
+.guest-card.featured {
+    border: 3px solid goldenrod;
+}
+
+.guest-image {
+    width: 180px;
+    height: 180px;
+
+    margin: 0 auto 5px;
+    overflow: hidden;
+    border-radius: 5%;
+
+    background-color: black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 55px;
+}
+.guest-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    
+}
+.guest-card h3 {
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   ACTIVITIES
+========================= */
+
+.activities {
+    background-color: black;
+}
+
+.section-title.light h2 {
+    color: white;
+}
+
+.section-title.light p {
+    color: goldenrod;
+}
+
+.activity-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.activity-card {
+    width: 240px;
+    min-height: 230px;
+    padding: 30px;
+
+    background-color: black;
+
+    border: 1px solid rgb(49, 48, 48);
+    border-radius: 20px;
+
+    text-align: center;
+    color: white;
+
+    transition: all 0.35s ease;
+}
+
+.activity-card:hover {
+    border-color: goldenrod;
+    transform: translateY(-8px);
+}
+
+.activity-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.activity-card h3 {
+    color: goldenrod;
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   FOOD
+========================= */
+
+.food {
+    background-color: whitesmoke;
+}
+
+.food-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.food-card {
+    width: 270px;
+
+    padding: 30px;
+
+    background-color: white;
+
+    border-left: 5px solid goldenrod;
+
+    box-shadow: 0 5px 15px whitesmoke;
+}
+
+.food-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.food-card h3 {
+    margin-bottom: 15px;
+}
+
+.food-card ul {
+    padding-left: 20px;
+}
+
+.food-card li {
+    margin: 7px 0;
+}
+
+
+/* =========================
+   DJ NIGHT
+========================= */
+
+.dj {
+    min-height: 550px;
+
+    background-image:
+        linear-gradient(
+            rgba(20, 0, 40, 0.75),
+            rgba(20, 0, 40, 0.75)
+        ),
+        url("dj.jpeg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    color: white;
+}
+
+.dj-content p:first-child {
+    color: goldenrod;
+    letter-spacing: 4px;
+    font-weight: bold;
+}
+
+.dj h2 {
+    font-size: 60px;
+    margin: 15px 0;
+    text-shadow: 3px 3px 6px black;
+}
+
+.dj h3 {
+    font-size: 30px;
+    color: goldenrod;
+}
+
+
+/* =========================
+   HIGHLIGHTS
+========================= */
+
+.highlights {
+    background-color: white;
+}
+
+.highlight-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.highlight {
+    width: 200px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    border: 2px solid goldenrod;
+    border-radius: 12px;
+
+    transition: 0.3s;
+}
+
+.highlight:hover {
+    border-color: goldenrod;
+    transform: scale(1.05);
+}
+
+.highlight span {
+    display: block;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.highlight h3 {
+    font-size: 17px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    background-color: whitesmoke;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.contact-info,
+form {
+    width: 400px;
+
+    padding: 30px;
+
+    background-color: white;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 15px beige;
+}
+
+.contact-info h3,
+form h3 {
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin: 12px 0;
+}
+
+form input,
+form textarea {
+    width: 100%;
+
+    padding: 13px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid rgb(238, 230, 230);
+    border-radius: 5px;
+
+    font-size: 14px;
+}
+
+form textarea {
+    height: 100px;
+    resize: none;
+}
+
+form button {
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+    border-radius: 5px;
+
+    background-color: black;
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+form button:hover {
+    background-color: goldenrod;
+    color: black;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: black;
+    color: white;
+
+    text-align: center;
+
+    padding: 35px 10px;
+}
+
+footer h2 span {
+    color: goldenrod;
+}
+
+footer p {
+    margin: 8px;
+}
+
+.copyright {
+    color: rgb(146, 142, 142);
+    font-size: 13px;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media screen and (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .tagline {
+        font-size: 19px;
+    }
+
+    .description {
+        font-size: 15px;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+    .dj h2 {
+        font-size: 42px;
+    }
+
+    .contact-info,
+    form {
+        width: 100%;
+    }
+
+}
+

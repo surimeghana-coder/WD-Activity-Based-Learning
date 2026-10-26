@@ -1,0 +1,141 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff8f0;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #8b2e2e;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 40px;
+}
+
+header p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Navigation */
+nav {
+    background-color: #333;
+    text-align: center;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 17px;
+}
+
+nav a:hover {
+    color: #ffcc80;
+}
+
+/* Main */
+main {
+    width: 85%;
+    margin: 30px auto;
+}
+
+/* All Sections */
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px gray;
+}
+
+section h2 {
+    color: #8b2e2e;
+    text-align: center;
+}
+
+/* Dishes */
+article {
+    background-color: #fff0df;
+    padding: 20px;
+    margin: 20px 0;
+    border-left: 6px solid #8b2e2e;
+    border-radius: 8px;
+}
+
+article h3 {
+    color: #8b2e2e;
+    font-size: 23px;
+}
+
+article:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px #bbb;
+}
+
+/* Cuisines */
+.cuisine {
+    background-color: #fff8f0;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    border: 1px solid #e5b7a0;
+}
+
+.cuisine h3 {
+    color: #8b2e2e;
+    font-size: 22px;
+}
+
+.cuisine:hover {
+    background-color: #ffe9d6;
+}
+
+/* Latest Dishes / Aside */
+aside {
+    background-color: #ffe0b2;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px gray;
+}
+
+aside h2 {
+    color: #8b2e2e;
+    text-align: center;
+}
+
+/* Dish names */
+dt {
+    font-weight: bold;
+    font-size: 20px;
+    color: #8b2e2e;
+    margin-top: 20px;
+}
+
+/* Dish descriptions */
+dd {
+    margin: 8px 0 15px 25px;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 0;
+}
